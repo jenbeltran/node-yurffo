@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Provider A",
+    "industry": "food",
+    "prices": [
+      {
+        "premium": 1000,
+        "fee": 50
+      },
+      {
+        "premium": 1000,
+        "fee": 50
+      }
+    ]
+  },
+  {
+    "name": "Provider B",
+    "industry": "food",
+    "prices": [
+      {
+        "premium": 1000,
+        "fee": 50
+      },
+      {
+        "premium": 1000,
+        "fee": 50
+      }
+    ]
+  },
+  {
+    "name": "Provider C",
+    "industry": "technology",
+    "prices": [
+      {
+        "premium": 3000,
+        "fee": 100
+      },
+      {
+        "premium": 944,
+        "fee": 50
+      }
+    ]
+  },
+  {
+    "name": "Provider D",
+    "industry": "technology",
+    "prices": [
+      {
+        "premium": 670,
+        "fee": 20
+      },
+      {
+        "premium": 644,
+        "fee": 30
+      }
+    ]
+  },
+  {
+    "name": "Provider D",
+    "industry": "technology",
+    "prices": [
+      {
+        "premium": 1000,
+        "fee": 20
+      }
+    ]
+  },
+  {
+    "name": "Provider E",
+    "industry": "retail",
+    "prices": [
+      {
+        "premium": 855,
+        "fee": ""
+      }
+    ]
+  },
+  {
+    "name": "Provider F",
+    "industry": "retail",
+    "prices": [
+      {
+        "premium": null,
+        "fee": 20
+      }
+    ]
+  }
+]
