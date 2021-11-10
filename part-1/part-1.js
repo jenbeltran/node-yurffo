@@ -3,7 +3,7 @@
  * file contains providers available for an industry)
  */
 
-const PROVIDERS = require('../shared/data.json');
+const PROVIDERS = require("../shared/data.json");
 
 /**
  * Create a query that returns total premiums and fees available for retail industry
@@ -12,6 +12,26 @@ function task1() {
   /**
    * TODO: Your body goes here
    */
+  // run a forEach loop to go through the data array
+  // for each provider, check if the industry is 'retail'
+  // then check if the premium and the fees are numbers
+  // if so, tally the total and push into empty array
+  const expectedTask1 = [];
+  let totalValues = { totalPremium: 0, totalFees: 0 };
+  PROVIDERS.forEach((provider) => {
+    if (provider.industry == "retail") {
+      {
+        Number.isInteger(provider.prices[0].premium) == 1 &&
+          (totalValues.totalPremium += provider.prices[0].premium);
+      }
+      {
+        Number.isInteger(provider.prices[0].fee) == 1 &&
+          (totalValues.totalFees += provider.prices[0].fee);
+      }
+    }
+  });
+  expectedTask1.push(totalValues);
+  return expectedTask1;
 }
 
 /**
