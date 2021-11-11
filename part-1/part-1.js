@@ -12,10 +12,11 @@ function task1() {
   /**
    * TODO: Your body goes here
    */
-  // run a forEach loop to go through the data array
+  // run a forEach loop to go through the providers array
   // for each provider, check if the industry is 'retail'
   // then check if the premium and the fees are numbers
-  // if so, tally the total and push into empty array
+  // if so, tally the premium and fee totals in the totalValues object
+  // then push into expectedTask1 array
   const expectedTask1 = [];
   let totalValues = { totalPremium: 0, totalFees: 0 };
   PROVIDERS.forEach((provider) => {
@@ -41,7 +42,12 @@ function task2() {
   /**
    * TODO: Your body goes here
    */
-
+  // run a forEach loop to go through the providers array
+  // for each provider, check if the industry is technology
+  // if so, do array.reduce to compare the current premium in the array from the previous premium
+  // if the previous premium is smaller than the current one, save the previous one
+  // once the loop is done, save the smallest value as totalPremium
+  // then push into expectedTask2 array
   const expectedTask2 = [];
   let totalValues = { totalPremium: 0 };
   PROVIDERS.forEach((provider) => {
@@ -64,6 +70,19 @@ function task3() {
   /**
    * TODO: Your body goes here
    */
+  // run a forEach loop through the providers array
+  // if the provider indistry is technology AND if the premium is greater or equal to 1000,
+  // push the provider name into the expectedTask3 array;
+  const expectedTask3 = [];
+  PROVIDERS.forEach((provider) => {
+    if (
+      provider.industry == "technology" &&
+      provider.prices[0].premium >= 1000
+    ) {
+      expectedTask3.push(provider.name);
+    }
+  });
+  return expectedTask3;
 }
 
 /**
