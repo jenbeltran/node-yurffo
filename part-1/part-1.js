@@ -41,6 +41,19 @@ function task2() {
   /**
    * TODO: Your body goes here
    */
+
+  const expectedTask2 = [];
+  let totalValues = { totalPremium: 0 };
+  PROVIDERS.forEach((provider) => {
+    if (provider.industry == "technology") {
+      provider.prices.reduce((prev, curr) => {
+        totalValues.totalPremium =
+          prev.premium < curr.premium ? prev.premium : curr.premium;
+      });
+    }
+  });
+  expectedTask2.push(totalValues);
+  return expectedTask2;
 }
 
 /**
