@@ -9,7 +9,7 @@ describe('#Part1', () => {
   // TODO: Implement the suite to match the length
   it('task 1 should have correct length', () => {
     // Fill this
-    expect(part1.task1().length).toEqual(1);
+    expect(part1.task1().length).toEqual(expectedDataP1.expectedTask1.length);
   });
 
   it('task 2 should meet the expected data', () => {
