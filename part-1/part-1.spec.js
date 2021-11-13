@@ -26,4 +26,13 @@ describe('#Part1', () => {
    * Example Usage:
    *  it('', () => {});
    * */
+
+  it("task 2 should have correct length", () => {
+    expect(part1.task2().length).toEqual(expectedDataP1.expectedTask2.length);
+  });
+
+  it("task 3 should have correct length", () => {
+    expect(part1.task3().length).toEqual(expectedDataP1.expectedTask3.length);
+  });
+
 });
