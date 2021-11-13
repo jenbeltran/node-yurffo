@@ -9,9 +9,30 @@
  * that information if we have to (total price = premium + fee).
  */
 class Price {
-  constructor({ fee, premium }) {}
+  //each time an object with { fee, premium } gets passed in,
+  //set the class property of 'premium' to be { premium }
+  //and the class property of 'fee' to be { fee }
+  constructor({ fee, premium }) {
+    (this.premium = premium), (this.fee = fee);
+  }
 
-  add(...prices) {}
+  //when the add() function is called, it takes in an array of prices
+  // run a forEach loop on the prices array
+  // and then tally the premiums and the fees
+  // an object named `combinedPrice` is returned and has two properties which is the premium total and the fee total
+  add(...prices) {
+    prices.forEach((price) => {
+      this.premium += price.premium;
+      this.fee += price.fee;
+    });
+
+    const combinedPrice = {
+      premium: this.premium,
+      fee: this.fee,
+    };
+
+    return combinedPrice;
+  }
 }
 
 /**
@@ -56,7 +77,18 @@ class NestedPrice extends Price {
    * The argument `prices` should be an array of instances of
    * the class Price or NestedPrice.
    */
-  constructor(prices) {}
+  //since this is a subclass, super() the props to use them
+  //run a forEach loop to get each price instance
+  // tally the total of the fees and the premiums
+  //set the class property of 'fee' to be the total fees
+  //and the class property of 'premium' to be the total premiums
+  constructor(prices) {
+    super({ fee: 0, premium: 0 });
+    prices.forEach((price) => {
+      this.fee += price.fee;
+      this.premium += price.premium;
+    });
+  }
 }
 
 /**
@@ -86,3 +118,8 @@ function task2() {
 }
 
 console.log(task2());
+
+module.exports = {
+  task1,
+  task2,
+};
